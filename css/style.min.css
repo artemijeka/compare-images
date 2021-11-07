@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.compare-images {
+  display: block;
+  width: 70vw;
+  height: 45vw;
+  position: relative;
+}
+.compare-images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+.compare-images__n1 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+.compare-images__n2 {
+  width: 95%;
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  resize: horizontal;
+  position: absolute;
+  z-index: 2;
+}
+.compare-images__n2-resizer {
+  background: -o-linear-gradient(135deg, white 50%, transparent 0);
+  background: linear-gradient(-45deg, white 50%, transparent 0);
+  position: absolute;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  bottom: 0;
+  z-index: 30;
+}
+.compare-images__n2-img {
+  -webkit-filter: blur(2px) grayscale(0.8) sepia(0.8);
+          filter: blur(2px) grayscale(0.8) sepia(0.8);
+}
+.compare-images__n2-attention {
+  width: 0;
+  height: 0;
+  color: black;
+  font-size: 2rem;
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation-name: scale-floating;
+          animation-name: scale-floating;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  position: absolute;
+  left: 95%;
+  bottom: 0;
+  z-index: 10;
+}
+.compare-images__n2-attention.--remove {
+  opacity: 0;
+}
+
+@-webkit-keyframes scale-floating {
+  0% {
+    font-size: 2rem;
+  }
+  50% {
+    font-size: 2.75rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
+
+@keyframes scale-floating {
+  0% {
+    font-size: 2rem;
+  }
+  50% {
+    font-size: 2.75rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
