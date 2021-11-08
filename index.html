@@ -26,20 +26,18 @@
 
   </div>
   
+
+  
 <script>
   let compareImages__n2Attention = document.querySelector('.compare-images__n2-attention');
-  let compareImages__n2Img = document.querySelector('.compare-images__n2-img');
   let compareImages__n2 = document.querySelector('.compare-images__n2');
-  
-  document.addEventListener('mousemove', function() {
-    compareImages__n2Attention.style.left = compareImages__n2Img.getBoundingClientRect().width + 'px';
-  });
 
   compareImages__n2.addEventListener('mousedown', function() {
     compareImages__n2Attention.classList.add('--remove');
   });
-
 </script>
+
+
 
 </body>
 </html>
